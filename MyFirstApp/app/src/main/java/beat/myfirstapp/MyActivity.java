@@ -10,10 +10,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MyActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "beat.myfirstapp.MESSAGE";
+
+    private int gebruiker = 1;
+    private VraagControl nieuwevraag1, nieuwevraag2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +26,31 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        if (savedInstanceState != null){
+            nieuwevraag1 = new VraagControl(gebruiker, savedInstanceState.getInt("vId"));
+        }else {
+            nieuwevraag1 = new VraagControl(gebruiker, -1);
+        }
 
+        nieuwevraag2 = new VraagControl(gebruiker, -1);
+
+        TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
+        textViewVraag.setTextSize(40);
+        textViewVraag.setText(nieuwevraag1.Vraag_tekst());
+
+        Button buttona = (Button)findViewById(R.id.ButtonA);
+        buttona.setTextSize(40);
+        buttona.setText(nieuwevraag1.Antwoord_A_tekst());
+
+        Button buttonb = (Button)findViewById(R.id.ButtonB);
+        buttonb.setTextSize(40);
+        buttonb.setText(nieuwevraag1.Antwoord_B_tekst());
     }
+
+
     public void ButtonAntwoord(View view) {
         Intent intent = new Intent(this, DisplayResultaatActivity.class);
-        Button knop = (Button) view;
+        Button knop = (Button)view;
         String antwoord = knop.getText().toString();
 
         intent.putExtra(EXTRA_MESSAGE, antwoord);
