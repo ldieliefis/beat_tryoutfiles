@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="beat.beniknormaal.ResultaatActivity"
+    tools:showIn="@layout/activity_resultaat"
+    android:background="#131f83">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:gravity="right|top"
+        android:background="@drawable/logo_klein"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"> </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hier komt weer de vraag, met hieronder de grafiek"
+        android:textSize="40dp"
+        android:drawableTint="#ffffff"
+        android:textColor="#ffffff"
+        android:id="@+id/textView"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/antwoord_textview"
+        android:gravity="center_vertical"
+        android:textColor="#ffd900" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volgende vraag"
+        android:textSize="20dp"
+        android:id="@+id/ButtonA"
+        android:layout_gravity="left"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/upvote_knop"
+        android:id="@+id/buttonUp"
+        android:onClick="buttonUp"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/downvote_knop"
+        android:id="@+id/buttonDown"
+        android:onClick="buttonDown"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonUp"
+        android:layout_toEndOf="@+id/buttonUp" />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/report_knop"
+        android:id="@+id/buttonReport"
+        android:onClick="buttonReport"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonDown"
+        android:layout_toEndOf="@+id/buttonDown"
+        android:background="#03fa28" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

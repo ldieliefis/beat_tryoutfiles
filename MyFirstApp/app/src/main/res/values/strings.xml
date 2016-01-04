@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="report_knop">Flag</string>
+    <string name="downvote_knop">\\/</string>
+    <string name="upvote_knop">/\\</string>
+    <string name="resultaat_knop">resultaat</string>
+    <string name="volgende_knop">Volgende</string>
+    <string name="title_activity_display_resultaat">My Resultaat</string>
+
+</resources>
