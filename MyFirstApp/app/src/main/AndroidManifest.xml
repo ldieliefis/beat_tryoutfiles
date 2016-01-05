@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/hetlogo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
@@ -35,6 +35,14 @@
             android:label="@string/title_activity_display_resultaat"
             android:parentActivityName=".MyActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="beat.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".BeniknormaalActivity"
+            android:label="@string/title_activity_beniknormaal"
+            android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="beat.myfirstapp.MyActivity" />

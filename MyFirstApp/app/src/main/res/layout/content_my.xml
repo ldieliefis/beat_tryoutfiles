@@ -11,19 +11,19 @@
     android:orientation="vertical"
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="beat.beniknormaal.MainActivity"
+
     tools:showIn="@layout/activity_vraag"
     android:background="#14327d">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <Button
         android:layout_width=" 50dp"
-        android:layout_height="0dip"
+        android:layout_height="50dp"
         android:layout_weight="1"
         android:gravity="top|right"
         android:background="@drawable/logo_klein"
         android:id="@+id/linearLayout3"
-        android:layout_gravity="right"></LinearLayout>
+        android:layout_gravity="right"
+        android:onClick="ButtonBenIkNormaal"></Button>
 
     <TextView
         android:layout_width="match_parent"
@@ -115,7 +115,7 @@
         android:text="@string/upvote_knop"
         android:textSize="12sp"
         android:id="@+id/buttonUp"
-        android:onClick="buttonUp"
+        android:onClick="ButtonVote"
         style="?android:attr/buttonStyleSmall"
         android:layout_toLeftOf="@+id/buttonDown"
         android:layout_alignParentBottom="true"
@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:text="@string/downvote_knop"
         android:id="@+id/buttonDown"
-        android:onClick="buttonDown"
+        android:onClick="ButtonVote"
         style="?android:attr/buttonStyleSmall"
         android:layout_alignTop="@+id/buttonReport"
         android:layout_toLeftOf="@id/buttonReport"
@@ -139,7 +139,7 @@
         android:text="@string/report_knop"
         android:textSize="12sp"
         android:id="@+id/buttonReport"
-        android:onClick="buttonReport"
+        android:onClick="ButtonReport"
         style="?android:attr/buttonStyleSmall"
         android:layout_toLeftOf="@+id/ButtonVolgende"
         android:layout_alignParentBottom="true"

@@ -57,6 +57,29 @@ public class MyActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void ButtonBenIkNormaal (View view){
+        //TODO button werkend maken
+        Intent intentie = new Intent(this, BeniknormaalActivity.class);
+        startActivity(intentie);
+    }
+
+    public  void ButtonVolgende(View view){
+        //TODO buttonvolgende kopieren uit displayresultaatactivity
+    }
+
+    public void ButtonResultaat(View view){
+        //TODO buttonresultaat
+    }
+
+    public void ButtonVote(View view){
+        //TODO buttonvote
+    }
+
+    public void ButtonReport(View view){
+        //TODO buttonreport
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
