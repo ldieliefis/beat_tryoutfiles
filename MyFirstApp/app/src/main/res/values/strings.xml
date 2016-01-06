@@ -8,5 +8,6 @@
     <string name="resultaat_knop">resultaat</string>
     <string name="volgende_knop">Volgende</string>
     <string name="title_activity_display_resultaat">My Resultaat</string>
+    <string name="title_activity_beniknormaal">BeniknormaalActivity</string>
 
 </resources>

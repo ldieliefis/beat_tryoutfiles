@@ -4,8 +4,13 @@
 
     <application
         android:allowBackup="true"
+<<<<<<< HEAD
         android:icon="@drawable/logo_klein"
         android:label="Ben ik normaal?"
+=======
+        android:icon="@mipmap/hetlogo"
+        android:label="@string/app_name"
+>>>>>>> origin/master
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
@@ -35,6 +40,14 @@
             android:label="@string/title_activity_display_resultaat"
             android:parentActivityName=".MyActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="beat.myfirstapp.MyActivity" />
+        </activity>
+        <activity
+            android:name=".BeniknormaalActivity"
+            android:label="@string/title_activity_beniknormaal"
+            android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="beat.myfirstapp.MyActivity" />
