@@ -4,13 +4,8 @@
 
     <application
         android:allowBackup="true"
-<<<<<<< HEAD
         android:icon="@drawable/logo_klein"
         android:label="Ben ik normaal?"
-=======
-        android:icon="@mipmap/hetlogo"
-        android:label="@string/app_name"
->>>>>>> origin/master
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
