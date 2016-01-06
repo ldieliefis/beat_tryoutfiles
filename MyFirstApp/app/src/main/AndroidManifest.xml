@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo_klein"
+        android:icon="@drawable/hetlogo"
         android:label="Ben ik normaal?"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
