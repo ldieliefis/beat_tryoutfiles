@@ -29,7 +29,6 @@ public class DisplayResultaatActivity extends AppCompatActivity {
     }
     public void ButtonVolgende(View view) {
         Intent intent = new Intent(this, MyActivity.class);
-
         startActivity(intent);
     }
     public void ButtonBenIkNormaal (View view){
