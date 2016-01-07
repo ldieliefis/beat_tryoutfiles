@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\site.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\site.jpg"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_camera.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\vraag_toevoegen.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\vraag_toevoegen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\account.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\account.jpg"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\credits.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\credits.jpg"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_send.xml"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_share.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\mijn_vragen.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\mijn_vragen.jpg"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\instructies.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\instructies.jpg"
+    },
+    {
+        "merged": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\manon\\Documents\\GitHub\\BeaT\\NavigationDrawer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "F:\\NavigationDrawer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\uitloggen.jpg",
+        "source": "F:\\NavigationDrawer\\app\\src\\main\\res\\drawable-v21\\uitloggen.jpg"
+    },
+    {
+        "merged": "F:\\NavigationDrawer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "F:\\NavigationDrawer\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]

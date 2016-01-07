@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/account"
+            android:title="Account" />
+        <item
+            android:id="@+id/nav_vraagToevoegen"
+            android:icon="@drawable/vraag_toevoegen"
+            android:title="Vraag toevoegen" />
+        <item
+            android:id="@+id/nav_mijnVragen"
+            android:icon="@drawable/mijn_vragen"
+            android:title="Mijn vragen" />
+        <item
+            android:id="@+id/nav_instructies"
+            android:icon="@drawable/instructies"
+            android:title="Instructies" />
+
+        <item
+            android:id="@+id/nav_credits"
+            android:icon="@drawable/credits"
+            android:title="Credits" />
+        <item
+            android:id="@+id/nav_uitloggen"
+            android:icon="@drawable/uitloggen"
+            android:title="Uitloggen" />
+    </group>
+
+    <item android:title="Communicatie">
+        <menu>
+            <item
+                android:id="@+id/nav_site"
+                android:icon="@drawable/site"
+                android:title="Site" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>
