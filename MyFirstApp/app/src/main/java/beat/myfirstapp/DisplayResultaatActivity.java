@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayResultaatActivity extends AppCompatActivity {
@@ -23,6 +24,14 @@ public class DisplayResultaatActivity extends AppCompatActivity {
         textView.setTextSize(40);
         textView.setText(resultaat);
 
+        TextView TV1 = (TextView) findViewById(R.id.textview1);
+        TextView TV2 = (TextView) findViewById(R.id.textview2);
+        TV1.setText("percentage1" +"%");
+        TV2.setText("percentage2" +"%");
+
+        Button RB = (Button)findViewById(R.id.Reacties);
+        RB.setText("Comments");
+        RB.getBackground().setAlpha(1);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -35,5 +44,15 @@ public class DisplayResultaatActivity extends AppCompatActivity {
         //TODO button werkend maken
         Intent intentie = new Intent(this, BeniknormaalActivity.class);
         startActivity(intentie);
+    }
+
+    public void Reacties(View view){
+        Button RB = (Button)findViewById(R.id.Reacties);
+
+
+        RB.setText("Reacties");
+
+
+
     }
 }

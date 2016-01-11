@@ -9,19 +9,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
     tools:showIn="@layout/activity_vraag"
     android:background="#14327d">
 
     <Button
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
         android:layout_weight="1"
         android:gravity="top|right"
         android:background="@drawable/logo_klein"
-        android:id="@+id/linearLayout3"
         android:layout_gravity="right"
         android:onClick="ButtonBenIkNormaal"></Button>
 
@@ -52,7 +49,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Antwoord A - button past zich aan de lengte van de tekst aan, we moeten dus een maximale lengte instellen voor de antwoorden, anders valt B eraf"
-
             android:textSize="20sp"
             android:id="@+id/ButtonA"
             android:layout_alignBaseline="@+id/ButtonB"
@@ -104,7 +100,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-
         android:layout_weight="1"/>
 
     <Button

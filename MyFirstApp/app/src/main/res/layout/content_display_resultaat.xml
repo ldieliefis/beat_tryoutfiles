@@ -15,8 +15,8 @@
         android:layout_margin="16dp">
 
     <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_marginTop="50dp"
         android:gravity="top|right"
         android:background="@drawable/logo_klein"
@@ -52,6 +52,44 @@
 
     </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/Percentage">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview1"
+                android:textColor="#ffffff"
+                android:textSize="40sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview4"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview2"
+                android:textColor="#ffffff"
+                android:textSize="40sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview5"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Reacties"
+                android:textSize="30sp"
+                android:onClick="Reacties"
+                />
+        </LinearLayout>
+
 
     <Button
         android:layout_width="match_parent"
@@ -69,6 +107,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+
     <Button
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -78,9 +118,7 @@
         android:id="@+id/buttonUp"
         android:onClick="buttonUp"
         style="?android:attr/buttonStyleSmall"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="1dp"
-        android:background="#FFFFFF"/>
+        android:layout_alignParentBottom="true"/>
 
     <Button
         android:layout_height="wrap_content"
@@ -91,9 +129,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/buttonUp"
-        android:layout_toEndOf="@+id/buttonUp"
-        android:layout_marginRight="1dp"
-        android:background="#FFFFFF"/>
+        android:layout_toEndOf="@+id/buttonUp"/>
 
     <Button
         android:layout_height="wrap_content"
@@ -104,8 +140,7 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_alignParentBottom="true"
         android:layout_toRightOf="@+id/buttonDown"
-        android:layout_toEndOf="@+id/buttonDown"
-        android:background="#FFFFFF"/>
+        android:layout_toEndOf="@+id/buttonDown"/>
     </LinearLayout>
     </LinearLayout>
 </LinearLayout>
