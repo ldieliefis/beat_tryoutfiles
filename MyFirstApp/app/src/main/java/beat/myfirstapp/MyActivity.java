@@ -29,7 +29,7 @@ public class MyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        vraagteller = 0;
+        //vraagteller = 0;
         /*
         if (savedInstanceState != null){
             nieuwevraag1 = new VraagControl(gebruiker, savedInstanceState.getInt("vId"));
@@ -38,11 +38,11 @@ public class MyActivity extends AppCompatActivity {
         }*/
 
 
-        nieuwevraag1 = new VraagControl(gebruiker, vraagteller);
+        nieuwevraag1 = new VraagControl(gebruiker, -1);
 
-        nieuwevraag2 = new VraagControl(gebruiker, vraagteller+1);
+        nieuwevraag2 = new VraagControl(gebruiker, -1);
 
-        vraagteller += 1;
+        //vraagteller += 1;
 
         // zet de tekst (vraag) van de opgevraagde 'vraagcontrol' in de tekstview
         TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
