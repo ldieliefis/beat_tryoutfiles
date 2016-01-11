@@ -22,7 +22,7 @@ public class VraagControl { //
         gebruiker = newgebruiker;
 
         vId = vraagid;
-
+/*
         vId = 5;
 
         //cControl = new CommentControl(vId);
@@ -36,23 +36,23 @@ public class VraagControl { //
         voteDown = 1;
         optional_info = "opionele informatie";
         error = null;
-
-        //MaakVraag();
+*/
+        MaakVraag();
     }
-/*
+
     private void MaakVraag(){
         final VraagControl thisVraagControl = this;
-        final CommentControl thisCommentControl = cControl;
+        //final CommentControl thisCommentControl = cControl;
 
         krijgvraag = new Thread(new Runnable(){
             public void run (){
                 DatabaseFuncties.KrijgVraag(gebruiker, vId, thisVraagControl);
-                thisCommentControl.KrijgComments(1);
+      //          thisCommentControl.KrijgComments(1);
             }
         });
 
         krijgvraag.start();
-    }*/
+    }
 
     public int Vraag_id(){
         return vId;
