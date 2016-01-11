@@ -6,30 +6,32 @@
             android:id="@+id/nav_speel"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/nav_speel"/>
-           <!-- android:onClick="CreditPopUp"/>-->
+
         <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/account"
             android:title="@string/nav_account" />
         <item
             android:id="@+id/nav_vraagToevoegen"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/vraag_toevoegen"
             android:title="@string/nav_vraagToevoegen" />
         <item
             android:id="@+id/nav_mijnVragen"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/mijn_vragen"
             android:title="@string/nav_mijnVragen" />
         <item
             android:id="@+id/nav_instructies"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/instructies"
             android:title="@string/nav_instructies" />
         <item
             android:id="@+id/nav_credits"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/nav_credits" />
+            android:icon="@drawable/credits"
+            android:title="@string/nav_credits"/>
+            <!--android:onClick="CreditPopUp"-->
+
         <item
             android:id="@+id/nav_uitloggen"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/uitloggen"
             android:title="@string/nav_uitloggen" />
     </group>
 
