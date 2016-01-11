@@ -13,25 +13,25 @@
             android:title="@string/nav_account" />
         <item
             android:id="@+id/nav_vraagToevoegen"
-            android:icon="@drawable/vraag_toevoegen"
+            android:icon="@drawable/account"
             android:title="@string/nav_vraagToevoegen" />
         <item
             android:id="@+id/nav_mijnVragen"
-            android:icon="@drawable/mijn_vragen"
+            android:icon="@drawable/account"
             android:title="@string/nav_mijnVragen" />
         <item
             android:id="@+id/nav_instructies"
-            android:icon="@drawable/instructies"
+            android:icon="@drawable/account"
             android:title="@string/nav_instructies" />
         <item
             android:id="@+id/nav_credits"
-            android:icon="@drawable/credits"
+            android:icon="@drawable/account"
             android:title="@string/nav_credits"/>
             <!--android:onClick="CreditPopUp"-->
 
         <item
             android:id="@+id/nav_uitloggen"
-            android:icon="@drawable/uitloggen"
+            android:icon="@drawable/account"
             android:title="@string/nav_uitloggen" />
     </group>
 
