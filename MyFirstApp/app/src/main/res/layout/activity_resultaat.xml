@@ -16,98 +16,133 @@
         android:orientation="vertical"
         android:layout_margin="16dp">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:gravity="top|right"
-        android:background="@drawable/logo_klein"
-        android:layout_gravity="top|right"
-        android:onClick="ButtonBenIkNormaal"></Button>
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="50dp"
+            android:gravity="top|right"
+            android:background="@drawable/logo_klein"
+            android:layout_gravity="top|right"
+            android:onClick="ButtonBenIkNormaal"></Button>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hier komt weer de vraag, met hieronder de grafiek"
-        android:textSize="25sp"
-        android:drawableTint="#ffffff"
-        android:textColor="#ffffff"
-        android:id="@+id/textView"
-        android:layout_above="@+id/linearLayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hier komt weer de vraag, met hieronder de grafiek"
+            android:textSize="25sp"
+            android:drawableTint="#ffffff"
+            android:textColor="#ffffff"
+            android:id="@+id/textView"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/antwoord_textview"
-        android:gravity="center_vertical"
-        android:textColor="#ffd900" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/antwoord_textview"
+            android:gravity="center_vertical"
+            android:textColor="#ffd900" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout">
 
-    </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/Percentage">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview1"
+                android:textColor="#ffffff"
+                android:textSize="40sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview4"/>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview2"
+                android:textColor="#ffffff"
+                android:textSize="40sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textview5"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Reacties"
+                android:textSize="30sp"
+                android:onClick="Reacties"
+                />
+        </LinearLayout>
 
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Volgende vraag"
-        android:textSize="20dp"
-        android:id="@+id/ButtonVolgende"
-        android:onClick="ButtonVolgende"
-        android:layout_gravity="left"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volgende vraag"
+            android:textSize="20dp"
+            android:id="@+id/ButtonVolgende"
+            android:onClick="ButtonVolgende"
+            android:layout_gravity="left"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="86dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:text="@string/upvote_knop"
-        android:id="@+id/buttonUp"
-        android:onClick="buttonUp"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="1dp"
-        android:background="#FFFFFF"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/downvote_knop"
-        android:id="@+id/buttonDown"
-        android:onClick="buttonDown"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/buttonUp"
-        android:layout_toEndOf="@+id/buttonUp"
-        android:layout_marginRight="1dp"
-        android:background="#FFFFFF"/>
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="@string/report_knop"
-        android:id="@+id/buttonReport"
-        android:onClick="buttonReport"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/buttonDown"
-        android:layout_toEndOf="@+id/buttonDown"
-        android:background="#FFFFFF"/>
-    </LinearLayout>
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/upvote_knop"
+                android:id="@+id/buttonUp"
+                android:onClick="buttonUp"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentBottom="true"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/downvote_knop"
+                android:id="@+id/buttonDown"
+                android:onClick="buttonDown"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonUp"
+                android:layout_toEndOf="@+id/buttonUp"/>
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/report_knop"
+                android:id="@+id/buttonReport"
+                android:onClick="buttonReport"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/buttonDown"
+                android:layout_toEndOf="@+id/buttonDown"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
