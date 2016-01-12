@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class VraagActivity extends AppCompatActivity {
+public class VraagActivity extends BeaTBaseActivity {
 
     public final static String EXTRA_MESSAGE = "beat.myfirstapp.MESSAGE";
 
