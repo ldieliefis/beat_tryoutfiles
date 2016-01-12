@@ -17,8 +17,6 @@ public class BeniknormaalActivity extends BeaTBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beniknormaal);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         //String resultaat = intent.getStringExtra(VraagActivity.EXTRA_MESSAGE);

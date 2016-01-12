@@ -23,7 +23,7 @@
             android:gravity="top|right"
             android:background="@drawable/logo_klein"
             android:layout_gravity="top|right"
-            android:onClick="ButtonBenIkNormaal"></Button>
+            android:onClick="ButtonBenIkNormaal" />
 
         <TextView
             android:layout_width="match_parent"

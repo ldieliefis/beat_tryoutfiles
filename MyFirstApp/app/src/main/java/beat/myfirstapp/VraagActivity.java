@@ -24,8 +24,6 @@ public class VraagActivity extends BeaTBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vraag);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         //vraagteller = 0;
         /*
@@ -117,6 +115,10 @@ public class VraagActivity extends BeaTBaseActivity {
 
     public  void ButtonVolgende(View view){
         //TODO buttonvolgende kopieren uit displayresultaatactivity
+        //IPV het kopieren en plakken (en dus code 2 keer gebruiken) zet anders deze hele methode in BeaTBaseActivity
+        //Hierdoor hoef je deze hele methode niet in beide methodes te zetten
+        //WARNING: er is een kans dat hij dan niet meer goed door linkt vanuit de xml, maar ik verwacht dat hij dat nu ook al niet doet als je ze in twee activities bepaald
+        //Voor meer info vraag mij (Brian)
     }
 
     public void ButtonResultaat(View view){

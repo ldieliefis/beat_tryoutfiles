@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/optionButton_small"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+
+    android:theme="@style/BeaTTheme.Buttons">
+
+    <Button
+        android:id="@+id/buttonUp"
+        android:onClick="ButtonVote"
+
+        android:text="@string/upvote_knop"
+        android:textSize="@dimen/optionButton_text"
+
+        android:layout_width="@dimen/optionButton_small"
+        android:layout_height="@dimen/optionButton_small"/>
+
+    <Button
+        android:id="@+id/buttonDown"
+        android:onClick="ButtonVote"
+
+        android:text="@string/downvote_knop"
+        android:textSize="@dimen/optionButton_text"
+
+        android:layout_width="@dimen/optionButton_small"
+        android:layout_height="@dimen/optionButton_small"/>
+
+    <Button
+        android:id="@+id/buttonReport"
+        android:onClick="ButtonReport"
+
+        android:text="@string/report_knop"
+        android:textSize="@dimen/optionButton_text"
+
+        android:layout_width="@dimen/optionButton_small"
+        android:layout_height="@dimen/optionButton_small"/>
+
+    <Button
+        android:id="@+id/ButtonResultaat"
+        android:onClick="ButtonResultaat"
+
+        android:text="@string/resultaat_knop"
+        android:textSize="@dimen/optionButton_text"
+
+        android:layout_width="0dp"
+        android:layout_height="@dimen/optionButton_small"
+        android:visibility="visible"
+
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/ButtonVolgende"
+        android:onClick="ButtonVolgende"
+
+        android:text="@string/volgende_knop"
+        android:textSize="@dimen/optionButton_text"
+
+        android:layout_width="0dp"
+        android:layout_height="@dimen/optionButton_small"
+
+        android:layout_weight="1"/>
+</LinearLayout>

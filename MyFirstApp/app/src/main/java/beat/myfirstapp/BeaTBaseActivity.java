@@ -11,8 +11,10 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 public class BeaTBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public Toolbar toolbar;
+
     protected void onCreateDrawer() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

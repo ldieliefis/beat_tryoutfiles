@@ -11,7 +11,7 @@ public class Splash extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vraag_loading);
+        setContentView(R.layout.splash);
 
         final ImageView iv = (ImageView) findViewById(R.id.imageView);
         final Animation an = AnimationUtils.loadAnimation(getBaseContext(),R.anim.loading_animation);

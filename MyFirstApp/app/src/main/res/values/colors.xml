@@ -2,4 +2,6 @@
 <resources>
     <color name="PrimaryBlue">#14327D</color>
     <color name="PrimaryGrey">#CCCCCC</color>
+    <color name="Button_Text_Color">#000000</color>
+    <color name="Vraag_Text_Color">#ffffff</color>
 </resources>

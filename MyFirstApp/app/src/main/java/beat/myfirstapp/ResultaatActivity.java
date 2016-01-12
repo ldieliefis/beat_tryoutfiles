@@ -14,8 +14,9 @@ public class ResultaatActivity extends BeaTBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultaat);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        //Dan zie je de resultaatbutton niet meer
+        (findViewById(R.id.ButtonResultaat)).setVisibility(View.GONE);
 
         Intent intent = getIntent();
         String resultaat = intent.getStringExtra(VraagActivity.EXTRA_MESSAGE);

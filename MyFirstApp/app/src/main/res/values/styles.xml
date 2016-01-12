@@ -13,6 +13,10 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="BeaTTheme.Buttons">
+        <item name="android:textColor">@color/Button_Text_Color</item>
+    </style>
+
     <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
 
 </resources>
