@@ -2,8 +2,6 @@ package beat.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,7 +10,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MyActivity extends AppCompatActivity {
+public class VraagActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "beat.myfirstapp.MESSAGE";
 
@@ -25,7 +23,7 @@ public class MyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_vraag);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -103,7 +101,7 @@ public class MyActivity extends AppCompatActivity {
 
 
     public void ButtonAntwoord(View view) {
-        Intent intent = new Intent(this, DisplayResultaatActivity.class);
+        Intent intent = new Intent(this, ResultaatActivity.class);
         Button knop = (Button)view;
         String antwoord = knop.getText().toString();
 

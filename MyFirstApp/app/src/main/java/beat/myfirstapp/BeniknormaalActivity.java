@@ -21,7 +21,7 @@ public class BeniknormaalActivity extends AppCompatActivity {
         //setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        //String resultaat = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
+        //String resultaat = intent.getStringExtra(VraagActivity.EXTRA_MESSAGE);
 
         TextView textView = (TextView)findViewById(R.id.tekstvakje);
         //TextView textView = new TextView(this);

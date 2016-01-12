@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
-    tools:context="beat.beniknormaal.ResultaatActivity"
-    tools:showIn="@layout/activity_resultaat"
-    android:background="#131f83">
+
+    tools:context=".ResultaatActivity"
+    tools:showIn="@layout/base_activity" >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

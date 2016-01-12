@@ -2,17 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="beat.myfirstapp" >
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/hetlogo"
         android:label="Ben ik normaal?"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/BeaTTheme"
         android:screenOrientation="portrait">
 
 
@@ -28,7 +25,8 @@
 
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/BeaTTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.LOGINACTIVITY" />
 
@@ -37,10 +35,9 @@
         </activity>
 
         <activity
-            android:name=".MyActivity"
+            android:name=".VraagActivity"
             android:screenOrientation="portrait"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MYACTIVITY" />
 
@@ -49,23 +46,22 @@
         </activity>
 
         <activity
-            android:name=".DisplayResultaatActivity"
+            android:name=".ResultaatActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_display_resultaat"
-            android:parentActivityName=".MyActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:parentActivityName=".VraagActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="beat.myfirstapp.MyActivity" />
+                android:value=".VraagActivity" />
         </activity>
         <activity
             android:name=".BeniknormaalActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_beniknormaal"
-            android:parentActivityName=".MyActivity" >
+            android:parentActivityName=".VraagActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="beat.myfirstapp.MyActivity" />
+                android:value=".VraagActivity" />
         </activity>
     </application>
 
