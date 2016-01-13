@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class VraagActivity extends BeaTBaseActivity {
+public class VraagActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "beat.myfirstapp.MESSAGE";
 
@@ -43,7 +43,10 @@ public class VraagActivity extends BeaTBaseActivity {
         // zet de tekst (vraag) van de opgevraagde 'vraagcontrol' in de tekstview
         TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
         textViewVraag.setTextSize(40);
+        while(nieuwevraag1.Error()=="NoInfoGotten"){}
         textViewVraag.setText(nieuwevraag1.Vraag_tekst());
+
+        //textViewVraag.setText(NetwerkControl.LaadWebpagina("krijgvraag.php?question_id=" + -1 + "&user_id=" + 1));
 
         // zet de tekst (antwoord a) van de opgevraagde 'vraagcontrol' in de bovenste button
         Button buttona = (Button)findViewById(R.id.ButtonA);
@@ -139,26 +142,4 @@ public class VraagActivity extends BeaTBaseActivity {
         //TODO buttonreport
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

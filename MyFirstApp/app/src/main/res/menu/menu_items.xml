@@ -4,34 +4,34 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/menu_speel"
-            android:icon="@drawable/ic_menu_camera"
+
             android:title="@string/menu_speel"/>
 
         <item
             android:id="@+id/menu_account"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_account" />
         <item
             android:id="@+id/menu_vraagToevoegen"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_vraagToevoegen" />
         <item
             android:id="@+id/menu_mijnVragen"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_mijnVragen" />
         <item
             android:id="@+id/menu_instructies"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_instructies" />
         <item
             android:id="@+id/menu_credits"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_credits"/>
         <!--android:onClick="CreditPopUp"-->
 
         <item
             android:id="@+id/menu_uitloggen"
-            android:icon="@drawable/account"
+
             android:title="@string/menu_uitloggen" />
     </group>
 

@@ -1,7 +1,8 @@
 package beat.myfirstapp;
 
+import beat.myfirstapp.DatabaseFuncties;
 
-public class VraagControl { //
+public class VraagControl{
 
     private int vId;
     private String vTekst;
@@ -15,54 +16,65 @@ public class VraagControl { //
     private String optional_info;
     private String error;
     private int gebruiker;
+    private Boolean beantwoord;
     private Thread krijgvraag;
 
     VraagControl(int newgebruiker, int vraagid){
+        beantwoord = null;
         error = "NoInfoGotten";
         gebruiker = newgebruiker;
-
-        vId = vraagid;
-/*
-        vId = 5;
-
         //cControl = new CommentControl(vId);
 
-        vTekst = "wat is de vraag?";
-        aTekst = "antwoord a";
-        bTekst = "antwoord b";
-        aVotes = 12;
-        bVotes = 20;
-        voteUp = 4;
-        voteDown = 1;
-        optional_info = "opionele informatie";
-        error = null;
-*/
+        vId = vraagid;
+
         MaakVraag();
     }
 
     private void MaakVraag(){
         final VraagControl thisVraagControl = this;
-        //final CommentControl thisCommentControl = cControl;
 
         krijgvraag = new Thread(new Runnable(){
             public void run (){
                 DatabaseFuncties.KrijgVraag(gebruiker, vId, thisVraagControl);
-      //          thisCommentControl.KrijgComments(1);
             }
         });
 
         krijgvraag.start();
+
+        //cControl.KrijgComments(1);
+    }
+
+    private void AntwoordVraag(char answer){
+        final char finalanswer = answer;
+        final VraagControl thisVraagControl = this;
+
+        Thread antwoordvraag = new Thread(new Runnable(){
+            public void run (){
+                DatabaseFuncties.VoteVraag(thisVraagControl ,gebruiker, vId, finalanswer, 1);
+            }
+        });
+
+        antwoordvraag.start();
     }
 
     public int Vraag_id(){
         return vId;
     }
 
-    public String Vraag_tekst(){ return vTekst; }
+    public String Vraag_tekst(){
+        if(error == null){return vTekst;}
+        else if(error == "Wrong Question") {return "an error occurred";}
+        else if(error == "geen internet"){return "er is geen verbinding met internet?";}
+        else {return error;}
+    }
 
-    public String Antwoord_A_tekst(){ return aTekst; }
+    public String Antwoord_A_tekst(){
+        return aTekst;
+    }
 
-    public String Antwoord_B_tekst(){ return bTekst; }
+    public String Antwoord_B_tekst(){
+        return bTekst;
+    }
 
     public int Antwoord_A_votes(){
         return aVotes;
@@ -72,6 +84,16 @@ public class VraagControl { //
         return bVotes;
     }
 
+    public int Antwoord_A_Percentage(){
+        int percentage = (aVotes * 100) / (aVotes + bVotes);
+        return percentage;
+    }
+
+    public int Antwoord_B_Percentage(){
+        int percentage = (bVotes * 100) / (aVotes + bVotes);
+        return percentage;
+    }
+
     public int Votes_Up(){
         return voteUp;
     }
@@ -79,6 +101,7 @@ public class VraagControl { //
     public int Votes_Down(){
         return voteDown;
     }
+
     /*
     public CommentControl Comment_Control(){
         return cControl;
@@ -98,7 +121,8 @@ public class VraagControl { //
 
     public String Comment_Top_User(){
         return cControl.ReturnComment(0, 1);
-    }*/
+    }
+*/
 
     public String Optional_Info(){
         return optional_info;
@@ -108,13 +132,17 @@ public class VraagControl { //
         return error;
     }
 
+    public boolean Beantwoord(){
+        return beantwoord;
+    }
+
     public void VraagOpgezocht(int v_id, String v_str, String a_str, String b_str, int a_votes, int b_votes, int votes_up, int votes_down, String additional_info){
         vId = v_id;
         vTekst = v_str;
         aTekst = a_str;
         bTekst = b_str;
         aVotes = a_votes;
-        bVotes = a_votes;
+        bVotes = b_votes;
         voteUp = votes_up;
         voteDown = votes_down;
         optional_info = additional_info;
@@ -122,11 +150,17 @@ public class VraagControl { //
         StopThread();
     }
 
+
     public void StopThread(){
         krijgvraag.interrupt();
     }
 
+
     public void VraagOpgezochtError(String reason){
         error = reason;
+    }
+
+    public void VraagBeantwoord(boolean succes){
+        beantwoord = succes;
     }
 }

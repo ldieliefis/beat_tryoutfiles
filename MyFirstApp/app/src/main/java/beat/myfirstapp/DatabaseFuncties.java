@@ -4,19 +4,24 @@ import java.util.Random;
 
 public class DatabaseFuncties {
 
-    int vTeller = 0;
-/*
     private static String[] KrijgWebStringArray(String pagina, String splitter){
         String totaalString = NetwerkControl.LaadWebpagina(pagina);
         String[] totaalList = totaalString.split(splitter);
         return totaalList;
     }
-*/
+
     public static void KrijgVraag(int gebruiker, int vId, VraagControl vControl){
 
         // REMOVE "//" IN NEXT LINE TO GO OUT OF TESTING MODE
-        //String[] resultaatArray = KrijgWebStringArray("krijgvraag.php?question_id=" + vId + "&user_id=" + gebruiker, "~");
+        String[] resultaatArray = KrijgWebStringArray("krijgvraag.php?question_id=" + vId + "&user_id=" + gebruiker, "~");
 
+/*
+        if(resultaatArray == "error"){
+            vControl.VraagOpgezochtError("geen internet");
+        }
+        vControl.VraagOpgezocht(1, resultaatArray,"Kat","Hond",1,2,~3,~4,"~hj");
+*/
+        /*
         Random rand = new Random();
         int vraagnummer = rand.nextInt(4);
 
@@ -41,18 +46,21 @@ public class DatabaseFuncties {
                 test = "0~vraag~antwoord A~Antwoord B~1~2~3~4~Extra informatie";
         }
 
+
+
         String[] resultaatArray = test.split("~");
 
         if (resultaatArray.length == 8){
             resultaatArray = new String[]{resultaatArray[0], resultaatArray[1], resultaatArray[2], resultaatArray[3]
                     , resultaatArray[4], resultaatArray[5], resultaatArray[6], resultaatArray[7], null};
         }
+*/
 
         // the order of elements is v_id, v_str, a_str, b_str, a_votes, b_votes, votes_up, votes_down, additional_info
 
         if (resultaatArray.length == 9){
             // REMOVE "&& false" FROM THE STATEMENT BELOW TO GO OUT OF TESTING MODE
-            if(Integer.parseInt(resultaatArray[0]) != vId && vId >= 0 && false){
+            if(Integer.parseInt(resultaatArray[0]) != vId && vId >= 0){
                 vControl.VraagOpgezochtError("Wrong Question");
 
             }else{
@@ -64,6 +72,7 @@ public class DatabaseFuncties {
         }else{
             vControl.VraagOpgezochtError(resultaatArray[0]);
         }
+
     }
 /*
     public static void KrijgComment(CommentControl cControl, int vraagid, int begin, int aantal){
@@ -85,9 +94,21 @@ public class DatabaseFuncties {
             }
         }
     }
-
-    public static void VoteVraag(int gebruiker, int vId, char vote){
-        NetwerkControl.LaadWebpagina("votevraag.php?question_id=" + vId + "&user_id=" + gebruiker + "&vote=" + vote);
-    }
     */
+
+
+    public static void VoteVraag(VraagControl vControl,int gebruiker, int vId, char answer, int poging){
+        String result = NetwerkControl.LaadWebpagina("votevraag.php?question_id=" + vId + "&user_id=" + gebruiker + "&answer=" + answer);
+
+        if (result == "true"){
+            vControl.VraagBeantwoord(true);
+        }else {
+            if (poging > 11){
+                vControl.VraagBeantwoord(false);
+            }else{
+                VoteVraag(vControl, gebruiker, vId, answer, poging + 1);
+            }
+        }
+    }
+
 }

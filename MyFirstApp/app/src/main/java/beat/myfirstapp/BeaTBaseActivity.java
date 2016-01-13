@@ -19,7 +19,7 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+               this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -50,19 +50,19 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_speel) {
+        if (id == R.id.menu_speel) {
             // Handle the action
-        } else if (id == R.id.nav_account) {
+        } else if (id == R.id.menu_account) {
 
-        } else if (id == R.id.nav_vraagToevoegen) {
+        } else if (id == R.id.menu_vraagToevoegen) {
 
-        } else if (id == R.id.nav_mijnVragen) {
+        } else if (id == R.id.menu_mijnVragen) {
 
-        } else if (id == R.id.nav_instructies) {
+        } else if (id == R.id.menu_instructies) {
 
-        } else if (id == R.id.nav_credits) {
+        } else if (id == R.id.menu_credits) {
 
-        } else if (id == R.id.nav_uitloggen) {
+        } else if (id == R.id.menu_uitloggen) {
 
         }
 
