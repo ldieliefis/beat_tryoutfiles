@@ -102,8 +102,14 @@ public class VraagActivity extends BeaTBaseActivity {
         Intent intent = new Intent(this, ResultaatActivity.class);
         Button knop = (Button)view;
         String antwoord = knop.getText().toString();
+        intent.putExtra("gegevenAntwoord", antwoord);
 
-        intent.putExtra(EXTRA_MESSAGE, antwoord);
+        String aantalA = (""+20/*nieuwevraag1.a_Votes*/);
+        intent.putExtra("AantalA",aantalA);
+
+        String aantalB = (""+80/*nieuwevraag1.b_Votes*/);
+        intent.putExtra("AantalB", aantalB);
+
         startActivity(intent);
     }
 

@@ -92,6 +92,15 @@
                 />
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:id="@+id/scrollViewReacties"
+            android:scrollbars="vertical"
+            android:textColor="#ffffff"
+            android:textSize="35sp"
+            android:background="#1a2793"
+            android:onClick="ScrollViewReacties"/>
 
         <Button
             android:layout_width="match_parent"
