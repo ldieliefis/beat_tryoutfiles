@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
 
     tools:context=".VraagActivity">
@@ -17,14 +17,6 @@
     Als de tekst te groot is voor het scherm dan moet worden gebruikt:
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     -->
-
-    <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/logo_klein"
-        android:id="@+id/ButtonBenIkNormaal"
-        android:onClick="ButtonBenIkNormaal"
-        android:layout_gravity="right" />
 
     <TextView
         android:id="@+id/Vraag_Text"
@@ -44,7 +36,8 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="1"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:theme="@style/BeaTTheme.Buttons">
 
         <Button
             android:id="@+id/Antwoord_A_Button"
