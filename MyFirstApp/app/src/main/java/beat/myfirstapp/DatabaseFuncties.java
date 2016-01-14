@@ -15,50 +15,9 @@ public class DatabaseFuncties {
         // REMOVE "//" IN NEXT LINE TO GO OUT OF TESTING MODE
         String[] resultaatArray = KrijgWebStringArray("krijgvraag.php?question_id=" + vId + "&user_id=" + gebruiker, "~");
 
-/*
-        if(resultaatArray == "error"){
-            vControl.VraagOpgezochtError("geen internet");
-        }
-        vControl.VraagOpgezocht(1, resultaatArray,"Kat","Hond",1,2,~3,~4,"~hj");
-*/
-        /*
-        Random rand = new Random();
-        int vraagnummer = rand.nextInt(4);
-
-        // REMOVE NEXT TO LINES TO GO OUT OF TESTING MODE, ALSO LOOK IN THE IF STATEMENT BELOW
-        String test;
-        switch (vraagnummer){
-            // the order of elements is v_id, v_str, a_str, b_str, a_votes, b_votes, votes_up, votes_down, additional_info
-            case 0:
-                test = "1~Ben je meer een kattenmens of meer een hondenmens?~Kat~Hond~1~2~3~4~";
-                break;
-            case 1:
-                test = "2~Maak je een mug of een olifant?~Mug~Olifant~1~2~3~4~";
-                break;
-            case 2:
-                test = "3~Forever alone en je geliefde altijd gelukkig of samen met je geliefde, maar je geliefde is ongelukkig?~Jij gelukkig~Je geliefde gelukkig~1~2~3~4~";
-                break;
-            case 3:
-                test = "4~Roze en blauw of groen en geel?~Roze en blauw~Groen en geel~1~2~3~4~";
-                break;
-            default:
-
-                test = "0~vraag~antwoord A~Antwoord B~1~2~3~4~Extra informatie";
-        }
-
-
-
-        String[] resultaatArray = test.split("~");
-
-        if (resultaatArray.length == 8){
-            resultaatArray = new String[]{resultaatArray[0], resultaatArray[1], resultaatArray[2], resultaatArray[3]
-                    , resultaatArray[4], resultaatArray[5], resultaatArray[6], resultaatArray[7], null};
-        }
-*/
 
         // the order of elements is v_id, v_str, a_str, b_str, a_votes, b_votes, votes_up, votes_down, additional_info
-
-        if (resultaatArray.length == 9){
+        if (resultaatArray.length == 9 | resultaatArray.length == 8){
             // REMOVE "&& false" FROM THE STATEMENT BELOW TO GO OUT OF TESTING MODE
             if(Integer.parseInt(resultaatArray[0]) != vId && vId >= 0){
                 vControl.VraagOpgezochtError("Wrong Question");
@@ -66,7 +25,7 @@ public class DatabaseFuncties {
             }else{
                 vControl.VraagOpgezocht(vId, resultaatArray[1], resultaatArray[2], resultaatArray[3]
                         , Integer.parseInt(resultaatArray[4]), Integer.parseInt(resultaatArray[5])
-                        , Integer.parseInt(resultaatArray[6]), Integer.parseInt(resultaatArray[7]), resultaatArray[8]);
+                        , Integer.parseInt(resultaatArray[6]), Integer.parseInt(resultaatArray[7]), "hier moet extra info");
             }
 
         }else{

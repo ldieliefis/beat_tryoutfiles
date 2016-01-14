@@ -11,7 +11,7 @@ package beat.myfirstapp;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
 
-public class BeniknormaalActivity extends BeaTBaseActivity {
+public class BeniknormaalActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

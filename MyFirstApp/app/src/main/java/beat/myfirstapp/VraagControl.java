@@ -65,7 +65,7 @@ public class VraagControl{
         if(error == null){return vTekst;}
         else if(error == "Wrong Question") {return "an error occurred";}
         else if(error == "geen internet"){return "er is geen verbinding met internet?";}
-        else {return error;}
+        else {return "opgehaalde vraag:"+error;}
     }
 
     public String Antwoord_A_tekst(){

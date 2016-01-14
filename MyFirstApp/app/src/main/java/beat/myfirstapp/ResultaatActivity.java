@@ -2,12 +2,13 @@ package beat.myfirstapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ResultaatActivity extends BeaTBaseActivity {
+public class ResultaatActivity extends AppCompatActivity {
 
     TextView tv;
     @Override
@@ -31,14 +32,14 @@ public class ResultaatActivity extends BeaTBaseActivity {
         String percentage2 = intent.getStringExtra("AantalB");
         TextView TV1 = (TextView) findViewById(R.id.textview1);
         TextView TV2 = (TextView) findViewById(R.id.textview2);
-        TV1.setText(percentage1 +"%");
-        TV2.setText(percentage2 +"%");
+        TV1.setText(""+percentage1 +"%");
+        TV2.setText(""+percentage2 +"%");
 
         tv =(TextView)findViewById(R.id.scrollViewReacties);
 
         scrollComments();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
     public void ButtonVolgende(View view) {
@@ -51,26 +52,21 @@ public class ResultaatActivity extends BeaTBaseActivity {
         startActivity(intentie);
     }
 
-    public void ScrollViewReacties(View view){
-        Button RB = (Button)findViewById(R.id.Reacties);
-
-
-        RB.setText("Reacties");
-
-
-
-    }
-
     public void Reacties(View view){
         tv.setHeight(700);
     }
 
     private void scrollComments(){
-
         tv.setMovementMethod(new ScrollingMovementMethod());
-
-        tv.setText("aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
-        );
+        tv.setText("aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg"
+                        + "\n" +"aldkg" + "\n" +"aldkg" + "\n" +"aldkg");
 
     }
 }

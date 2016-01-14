@@ -14,7 +14,7 @@ public class VraagActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "beat.myfirstapp.MESSAGE";
 
-    private int gebruiker = 1, vraagteller; //TODO vraagteller verwijderen!!
+    private int gebruiker = 1;
     private VraagControl nieuwevraag1, nieuwevraag2;
 
     // TODO ervoor zorgen dat als je op het pijltje terug klikt, je max 1x naar het vraagscherm gaat + naar een nieuwe vraag
@@ -25,7 +25,8 @@ public class VraagActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vraag);
 
-        //vraagteller = 0;
+        (findViewById(R.id.ButtonResultaat)).setVisibility(View.VISIBLE);
+
         /*
         if (savedInstanceState != null){
             nieuwevraag1 = new VraagControl(gebruiker, savedInstanceState.getInt("vId"));
@@ -38,68 +39,30 @@ public class VraagActivity extends AppCompatActivity {
 
         nieuwevraag2 = new VraagControl(gebruiker, -1);
 
-        //vraagteller += 1;
+        while(nieuwevraag1.Error()=="NoInfoGotten"){}
 
         // zet de tekst (vraag) van de opgevraagde 'vraagcontrol' in de tekstview
         TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
-        textViewVraag.setTextSize(40);
-        while(nieuwevraag1.Error()=="NoInfoGotten"){}
+        //textViewVraag.setTextSize(40);
         textViewVraag.setText(nieuwevraag1.Vraag_tekst());
-
-        //textViewVraag.setText(NetwerkControl.LaadWebpagina("krijgvraag.php?question_id=" + -1 + "&user_id=" + 1));
 
         // zet de tekst (antwoord a) van de opgevraagde 'vraagcontrol' in de bovenste button
         Button buttona = (Button)findViewById(R.id.ButtonA);
-        buttona.setTextSize(40);
+        //buttona.setTextSize(40);
         buttona.setText(nieuwevraag1.Antwoord_A_tekst());
 
         // zet de tekst (antwoord b) van de opgevraagde 'vraagcontrol' in de onderste button
         Button buttonb = (Button)findViewById(R.id.ButtonB);
-        buttonb.setTextSize(40);
+        //buttonb.setTextSize(40);
         buttonb.setText(nieuwevraag1.Antwoord_B_tekst());
-    }
-
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        //TODO onStart() functie schrijven: deze wordt aangeroepen na onCreate en na onStop
-/*
-        nieuwevraag1 = nieuwevraag2;
-        nieuwevraag2 = new VraagControl(gebruiker, vraagteller);
-        vraagteller += 1;
-
-        TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
-        textViewVraag.setTextSize(40);
-        textViewVraag.setText(nieuwevraag1.Vraag_tekst());
-
-        Button buttona = (Button)findViewById(R.id.ButtonA);
-        buttona.setTextSize(40);
-        buttona.setText(nieuwevraag1.Antwoord_A_tekst());
-
-        Button buttonb = (Button)findViewById(R.id.ButtonB);
-        buttonb.setTextSize(40);
-        buttonb.setText(nieuwevraag1.Antwoord_B_tekst()); */
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        // TODO onPause() functie schrijven: wordt aangeroepen als pop-up scherm/slide screen ed in beeld komen.
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        //TODO onStop() functie schrijven; wordt aangeroepen als andere Activity in beeld komt en huidig programma dus niet meer zichtbaar is
     }
 
     @Override
     protected void onResume(){
         super.onResume();
-        //TODO onResume() functie schrijven: wordt aangeroepen na onPause() hier ook de vraagteller enzo in??
-    }
 
+        
+    }
 
     public void ButtonAntwoord(View view) {
         Intent intent = new Intent(this, ResultaatActivity.class);
@@ -117,7 +80,7 @@ public class VraagActivity extends AppCompatActivity {
     }
 
     public void ButtonBenIkNormaal (View view){
-        //TODO button werkend maken
+        //TODO beniknormaalpagina ontwikkelen!
         Intent intentie = new Intent(this, BeniknormaalActivity.class);
         startActivity(intentie);
     }
@@ -126,8 +89,10 @@ public class VraagActivity extends AppCompatActivity {
         //TODO buttonvolgende kopieren uit displayresultaatactivity
         //IPV het kopieren en plakken (en dus code 2 keer gebruiken) zet anders deze hele methode in BeaTBaseActivity
         //Hierdoor hoef je deze hele methode niet in beide methodes te zetten
-        //WARNING: er is een kans dat hij dan niet meer goed door linkt vanuit de xml, maar ik verwacht dat hij dat nu ook al niet doet als je ze in twee activities bepaald
+        //WARNING: er is een kans dat hij dan niet meer goed door linkt vanuit de xml, maar ik verwacht dat hij dat nu ook al niet doet als je ze in twee activities bepaalt
         //Voor meer info vraag mij (Brian)
+
+        nieuwevraag1 = new VraagControl(gebruiker, -1);
     }
 
     public void ButtonResultaat(View view){
