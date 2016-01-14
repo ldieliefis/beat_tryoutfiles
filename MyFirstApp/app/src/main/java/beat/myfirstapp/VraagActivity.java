@@ -3,9 +3,6 @@ package beat.myfirstapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,7 +22,7 @@ public class VraagActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vraag);
 
-        (findViewById(R.id.ButtonResultaat)).setVisibility(View.VISIBLE);
+        (findViewById(R.id.Button_Resultaat)).setVisibility(View.VISIBLE);
 
         /*
         if (savedInstanceState != null){
@@ -42,17 +39,17 @@ public class VraagActivity extends AppCompatActivity {
         while(nieuwevraag1.Error()=="NoInfoGotten"){}
 
         // zet de tekst (vraag) van de opgevraagde 'vraagcontrol' in de tekstview
-        TextView textViewVraag = (TextView)findViewById(R.id.vraag_textview);
+        TextView textViewVraag = (TextView)findViewById(R.id.Vraag_Text);
         //textViewVraag.setTextSize(40);
         textViewVraag.setText(nieuwevraag1.Vraag_tekst());
 
         // zet de tekst (antwoord a) van de opgevraagde 'vraagcontrol' in de bovenste button
-        Button buttona = (Button)findViewById(R.id.ButtonA);
+        Button buttona = (Button)findViewById(R.id.Antwoord_A_Button);
         //buttona.setTextSize(40);
         buttona.setText(nieuwevraag1.Antwoord_A_tekst());
 
         // zet de tekst (antwoord b) van de opgevraagde 'vraagcontrol' in de onderste button
-        Button buttonb = (Button)findViewById(R.id.ButtonB);
+        Button buttonb = (Button)findViewById(R.id.Antwoord_A_Button);
         //buttonb.setTextSize(40);
         buttonb.setText(nieuwevraag1.Antwoord_B_tekst());
     }
@@ -70,10 +67,10 @@ public class VraagActivity extends AppCompatActivity {
         String antwoord = knop.getText().toString();
         intent.putExtra("gegevenAntwoord", antwoord);
 
-        String aantalA = (""+20/*nieuwevraag1.a_Votes*/);
+        String aantalA = (""+nieuwevraag1.Antwoord_A_votes());
         intent.putExtra("AantalA",aantalA);
 
-        String aantalB = (""+80/*nieuwevraag1.b_Votes*/);
+        String aantalB = (""+nieuwevraag1.Antwoord_B_votes());
         intent.putExtra("AantalB", aantalB);
 
         startActivity(intent);
