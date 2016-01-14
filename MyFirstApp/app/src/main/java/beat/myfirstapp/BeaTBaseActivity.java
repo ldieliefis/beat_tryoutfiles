@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 
 public class BeaTBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public ActionBar actionBar;
+    DrawerLayout drawer;
 
     protected void onCreateDrawer() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -20,7 +21,7 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
 
         actionBar = getActionBar();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.base_activity);
+        drawer = (DrawerLayout) findViewById(R.id.base_activity);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -39,7 +40,6 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -69,7 +69,6 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
