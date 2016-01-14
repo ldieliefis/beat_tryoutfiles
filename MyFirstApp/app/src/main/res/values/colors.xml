@@ -9,4 +9,7 @@
     <color name="Antwoord_A">#00ff00</color>
     <color name="Antwoord_B">#ff8000</color>
     <color name="Antwoord_Percentage">#ffffff</color>
+
+    <color name="Statusbar_Background">#122F72</color>
+    <color name="Toolbar_Background">#14327D</color>
 </resources>

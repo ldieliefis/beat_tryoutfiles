@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppBaseTheme" parent="android:Theme.DeviceDefault.Light"></style>
+<style name="AppBaseTheme" parent="Theme.AppCompat.Light"></style>
 
-    <style name="BeaTTheme" parent="Theme.AppCompat.Light">
-        <item name="android:windowBackground">@color/PrimaryBlue</item>
-        <item name="android:textColor">@color/PrimaryGrey</item>
-    </style>
+<style name="BeaTTheme" parent="AppBaseTheme">
+    <item name="windowActionBar">false</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowBackground">@color/PrimaryBlue</item>
+    <item name="android:textColor">@color/PrimaryGrey</item>
 
-    <style name="BeaTTheme.NoActionBar">
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
-    </style>
+    <item name="colorPrimary">@color/Toolbar_Background</item>
+    <item name="colorPrimaryDark">@color/Statusbar_Background</item>
+</style>
+<!--
+    <item name="colorPrimary">#3F51B5</item>
+    <item name="colorPrimaryDark">#303F9F</item>
+-->
 
-    <style name="BeaTTheme.Buttons">
-        <item name="android:textColor">@color/Button_Text_Color</item>
-    </style>
+<style name="BeaTTheme.Buttons">
+    <item name="android:textColor">@color/Button_Text_Color</item>
+</style>
 
-    <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
+<style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
 
 </resources>
