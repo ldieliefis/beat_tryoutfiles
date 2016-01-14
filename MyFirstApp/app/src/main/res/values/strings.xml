@@ -7,8 +7,8 @@
     <string name="upvote_knop">/\\</string>
     <string name="resultaat_knop">resultaat</string>
     <string name="volgende_knop">Volgende</string>
-    <string name="title_activity_display_resultaat">My Resultaat</string>
-    <string name="title_activity_beniknormaal">BeniknormaalActivity</string>
+    <string name="title_activity_display_resultaat">Mijn Resultaat</string>
+    <string name="title_activity_beniknormaal">Ben ik normaal?</string>
 
     //login bullshit
     <string name="prompt_email">Email</string>

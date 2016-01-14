@@ -49,7 +49,7 @@ public class VraagActivity extends AppCompatActivity {
         buttona.setText(nieuwevraag1.Antwoord_A_tekst());
 
         // zet de tekst (antwoord b) van de opgevraagde 'vraagcontrol' in de onderste button
-        Button buttonb = (Button)findViewById(R.id.Antwoord_A_Button);
+        Button buttonb = (Button)findViewById(R.id.Antwoord_B_Button);
         //buttonb.setTextSize(40);
         buttonb.setText(nieuwevraag1.Antwoord_B_tekst());
     }
@@ -79,6 +79,7 @@ public class VraagActivity extends AppCompatActivity {
     public void ButtonBenIkNormaal (View view){
         //TODO beniknormaalpagina ontwikkelen!
         Intent intentie = new Intent(this, BeniknormaalActivity.class);
+        intentie.putExtra("gebruiker", gebruiker);
         startActivity(intentie);
     }
 

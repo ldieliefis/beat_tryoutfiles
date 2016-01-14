@@ -18,6 +18,14 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     -->
 
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/logo_klein"
+        android:id="@+id/ButtonBenIkNormaal"
+        android:onClick="ButtonBenIkNormaal"
+        android:layout_gravity="right" />
+
     <TextView
         android:id="@+id/Vraag_Text"
         android:gravity="start"

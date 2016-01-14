@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout_beniknormaal"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,10 +13,17 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="blabla"
         android:textColor="#698976"
         android:textSize="50sp"
-        android:id="@+id/tekstvakje"/>
+        android:id="@+id/tekstvaktitel"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="blabla"
+        android:textColor="#ffffff"
+        android:textSize="50sp"
+        android:id="@+id/tekstvakantwoord"/>
 </LinearLayout>

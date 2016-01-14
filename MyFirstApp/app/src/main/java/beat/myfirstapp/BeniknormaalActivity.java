@@ -8,6 +8,7 @@ package beat.myfirstapp;
         import android.support.v7.widget.Toolbar;
         import android.view.View;
         import android.widget.Button;
+        import android.widget.LinearLayout;
         import android.widget.RelativeLayout;
         import android.widget.TextView;
 
@@ -19,17 +20,14 @@ public class BeniknormaalActivity extends AppCompatActivity {
         setContentView(R.layout.activity_beniknormaal);
 
         Intent intent = getIntent();
-        //String resultaat = intent.getStringExtra(VraagActivity.EXTRA_MESSAGE);
+        int gebruiker = intent.getIntExtra("gebruiker", 0);
 
-        TextView textView = (TextView)findViewById(R.id.tekstvakje);
-        //TextView textView = new TextView(this);
+        TextView textView = (TextView)findViewById(R.id.tekstvaktitel);
         textView.setTextSize(40);
-        textView.setText("ben je normaal?");
-        //textView.setTextColor(255);
+        textView.setText("Ben jij normaal?");
 
-
-
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        TextView textviewantwoord = (TextView)findViewById(R.id.tekstvakantwoord);
+        textviewantwoord.setText("\n Nee, jij bent juist heel bijzonder! \nJij bent gebruiker nummer "+gebruiker);
     }
 
 }
