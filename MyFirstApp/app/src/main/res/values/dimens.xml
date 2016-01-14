@@ -5,8 +5,22 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    //De 5 buttons onderaan de vraag en resultaat activity
     <dimen name="optionButton_small">60dp</dimen>
     <dimen name="optionButton_text">14sp</dimen>
 
+    //de vraag en resultaat activity
     <dimen name="vraag_text_size">25sp</dimen>
+    <dimen name="framelayout_margin">5dp</dimen>
+
+    //alleen de vraag activity
+    <dimen name="button_antwoord_text_size">20sp</dimen>
+
+    //alleen de resultaatactivity
+    <dimen name="Antwoord_Text_Size">30sp</dimen>
+    <dimen name="Percentage_Text_Size">40sp</dimen>
+    <dimen name="Percentage_margin">5dp</dimen>
+    <dimen name="Percentage_differer">1dp</dimen>
+    <dimen name="Reacties_button_text_size">30sp</dimen>
+    <dimen name="Reacties_differer">20dp</dimen>
 </resources>

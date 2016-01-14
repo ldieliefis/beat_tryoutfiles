@@ -3,5 +3,10 @@
     <color name="PrimaryBlue">#14327D</color>
     <color name="PrimaryGrey">#CCCCCC</color>
     <color name="Button_Text_Color">#000000</color>
-    <color name="Vraag_Text_Color">#ffffff</color>
+
+    <color name="Vraag_Text">#ffffff</color>
+    <color name="Antwoord_Text">#ffffff</color>
+    <color name="Antwoord_A">#00ff00</color>
+    <color name="Antwoord_B">#ff8000</color>
+    <color name="Antwoord_Percentage">#ffffff</color>
 </resources>

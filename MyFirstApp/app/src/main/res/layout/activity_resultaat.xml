@@ -6,152 +6,140 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="bottom"
 
-    tools:context=".ResultaatActivity"
-    tools:showIn="@layout/base_activity" >
+    tools:context=".ResultaatActivity">
+    <!--
+    dit zorgt ervoor dat je alleen het menu ziet
+    tools:showIn="@layout/base_activity">
+    -->
+
+    <!--
+    misschien kan hiervoor gebruikt worden:
+    android:id="@+id/vraag_textview"
+    dan hoef je geen twee variabelen te gebruiken
+    -->
+    <TextView
+        android:id="@+id/Vraag_Text"
+        android:gravity="start"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="top"
+
+        android:text="vraag"
+        android:textSize="@dimen/vraag_text_size"
+        android:textColor="@color/Vraag_Text"
+        android:paddingBottom="@dimen/framelayout_margin" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="16dp">
+        android:layout_height="wrap_content"
 
-        <Button
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="50dp"
-            android:gravity="top|right"
-            android:background="@drawable/logo_klein"
-            android:layout_gravity="top|right"
-            android:onClick="ButtonBenIkNormaal" />
+        android:paddingLeft="@dimen/Percentage_margin"
+        android:paddingRight="@dimen/Percentage_margin"
+
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/Antwoord_A_Text"
+            android:text="Antwoord A"
+            android:textSize="@dimen/Antwoord_Text_Size"
+            android:textColor="@color/Antwoord_Text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hier komt weer de vraag, met hieronder de grafiek"
-            android:textSize="25sp"
-            android:drawableTint="#ffffff"
-            android:textColor="#ffffff"
-            android:id="@+id/textView"
-            android:layout_above="@+id/linearLayout"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/antwoord_textview"
-            android:gravity="center_vertical"
-            android:textColor="#ffd900" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/Percentage">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textview1"
-                android:textColor="#ffffff"
-                android:textSize="40sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textview4"/>
-
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textview2"
-                android:textColor="#ffffff"
-                android:textSize="40sp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textview5"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Reacties"
-                android:textSize="30sp"
-                android:onClick="Reacties"
-                />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:id="@+id/scrollViewReacties"
-            android:scrollbars="vertical"
-            android:textColor="#ffffff"
-            android:textSize="35sp"
-            android:background="#1a2793"
-            android:onClick="ScrollViewReacties"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Volgende vraag"
-            android:textSize="20dp"
-            android:id="@+id/ButtonVolgende"
-            android:onClick="ButtonVolgende"
-            android:layout_gravity="left"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="86dp" />
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-
-            <Button
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:text="@string/upvote_knop"
-                android:id="@+id/buttonUp"
-                android:onClick="buttonUp"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_alignParentBottom="true"/>
 
-            <Button
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/downvote_knop"
-                android:id="@+id/buttonDown"
-                android:onClick="buttonDown"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/buttonUp"
-                android:layout_toEndOf="@+id/buttonUp"/>
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:weightSum="100">
 
-            <Button
+                <LinearLayout
+                    android:id="@+id/Antwoord_A_Bar"
+
+                    android:layout_marginBottom="@dimen/Percentage_differer"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+
+                    android:background="@color/Antwoord_A"
+                    android:orientation="horizontal"/>
+
+                <TextView
+                    android:id="@+id/Antwoord_A_Percentage"
+
+                    android:text="30%"
+                    android:textColor="@color/Antwoord_Percentage"
+                    android:textSize="@dimen/Percentage_Text_Size"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="@string/report_knop"
-                android:id="@+id/buttonReport"
-                android:onClick="buttonReport"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/buttonDown"
-                android:layout_toEndOf="@+id/buttonDown"/>
+
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:id="@+id/Antwoord_B_Bar"
+
+                    android:layout_marginTop="@dimen/Percentage_differer"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+
+                    android:background="@color/Antwoord_B"
+                    android:orientation="horizontal"/>
+
+                <TextView
+                    android:id="@+id/Antwoord_B_Percentage"
+
+                    android:text="70%"
+                    android:textColor="@color/Antwoord_Percentage"
+                    android:textSize="@dimen/Percentage_Text_Size"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/Antwoord_B_Text"
+            android:text="Antwoord B"
+            android:textSize="@dimen/Antwoord_Text_Size"
+            android:textColor="@color/Antwoord_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Reacties_Button"
+        android:textSize="@dimen/Reacties_button_text_size"
+        android:text="\n"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Reacties_differer"
+
+        android:onClick="Reacties"/>
+
+    <include layout="@layout/option_buttons"/>
 </LinearLayout>

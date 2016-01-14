@@ -3,8 +3,7 @@
 
     <style name="AppBaseTheme" parent="android:Theme.DeviceDefault.Light"></style>
 
-
-    <style name="BeaTTheme" parent="Theme.AppCompat">
+    <style name="BeaTTheme" parent="Theme.AppCompat.Light">
         <item name="android:windowBackground">@color/PrimaryBlue</item>
         <item name="android:textColor">@color/PrimaryGrey</item>
     </style>

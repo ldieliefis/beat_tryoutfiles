@@ -6,78 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="left"
 
-    tools:context=".VraagActivity"
+    tools:context=".VraagActivity">
+    <!--
+    dit zorgt ervoor dat je alleen het menu ziet
     tools:showIn="@layout/base_activity">
+    -->
+
     <!--
     Als de tekst te groot is voor het scherm dan moet worden gebruikt:
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     -->
 
-    <!--
-    kan deze button niet op de toolbar zelf?
-    heb hem nu gelaten zoals hij is
-    -->
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="65dp"
-        android:layout_weight="1"
-        android:gravity="top|right"
-        android:background="@drawable/logo_klein"
-        android:layout_gravity="end"
-        android:onClick="ButtonBenIkNormaal" />
-
     <TextView
-        android:id="@+id/vraag_textview"
+        android:id="@+id/Vraag_Text"
+        android:gravity="start"
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="start|center_vertical"
+        android:layout_height="0dp"
+        android:layout_weight="1"
 
-        android:text= "Hier komt de vraag"
         android:textSize="@dimen/vraag_text_size"
-        android:textColor="@color/Vraag_Text_Color"
-
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="60dp"/>
+        android:textColor="@color/Vraag_Text"
+        android:paddingBottom="@dimen/framelayout_margin"/>
 
     <LinearLayout
+        android:layout_gravity=""
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="8"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/linearLayout2">
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
         <Button
+            android:id="@+id/Antwoord_A_Button"
+            android:textSize="@dimen/button_antwoord_text_size"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Antwoord A - button past zich aan de lengte van de tekst aan, we moeten dus een maximale lengte instellen voor de antwoorden, anders valt B eraf"
-            android:textSize="20sp"
-            android:id="@+id/ButtonA"
-            android:layout_alignBaseline="@+id/ButtonB"
-            android:layout_alignBottom="@+id/ButtonB"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="left"
+
+            android:gravity="center_horizontal|center_vertical"
             android:onClick="ButtonAntwoord"/>
 
         <Button
+            android:id="@+id/Antwoord_B_Button"
+            android:textSize="@dimen/button_antwoord_text_size"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Antwoord B"
-            android:textSize="20sp"
-            android:id="@+id/ButtonB"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
+
+            android:gravity="center_horizontal|center_vertical"
             android:onClick="ButtonAntwoord"/>
+
     </LinearLayout>
 
     <include layout="@layout/option_buttons" />
+
 </LinearLayout>
