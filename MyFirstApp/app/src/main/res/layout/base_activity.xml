@@ -28,7 +28,7 @@
             android:paddingRight="@dimen/framelayout_margin"
 
             android:layout_weight="1"
-            ></FrameLayout>
+            />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
@@ -38,6 +38,7 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/menu_header"
-        app:menu="@menu/menu_items"/>
+        app:menu="@menu/menu_items"
+        android:background="@color/PrimaryGrey"/>
 
 </android.support.v4.widget.DrawerLayout>

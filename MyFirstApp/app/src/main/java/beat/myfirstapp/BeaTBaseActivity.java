@@ -1,5 +1,6 @@
 package beat.myfirstapp;
 
+import android.app.ActionBar;
 import android.support.annotation.LayoutRes;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,19 +12,21 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 public class BeaTBaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    public Toolbar toolbar;
+    public ActionBar actionBar;
 
     protected void onCreateDrawer() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        actionBar = getActionBar();
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.base_activity);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-               this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.menu_drawer);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
