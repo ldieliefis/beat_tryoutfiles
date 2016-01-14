@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">HelpInstructies</string>
+    <string name="help_message">MESSAGE</string>
+    <string name="help_title">help title</string>
+    <string name="back">terug</string>
+
+    //Help Strings
+    <string name="helptitel1">1.Vragen</string>
+    <string name="helptitel2">2.Resultaat</string>
+    <string name="helptitel3">3.Commentaar</string>
+    <string name="helptitel4">4.Stemmen</string>
+    <string name="helptitel5">5.Ontmoeten</string>
+    <string name="helptitel6">6.Flaggen</string>
+    <string name="helptitel7">7.Verborgen Knop</string>
+    <string name="helpcontent1">In deze app is het de bedoeling om vragen te beantwoorden</string>
+    <string name="helpcontent2">Na het antwoorden kunt u zien hoeveel procent hetzelfde heeft geantwoord als u</string>
+    <string name="helpcontent3">U kunt ook commentaar geven op de gestelde vragen, of op ander commentaar</string>
+    <string name="helpcontent4">Het is ook mogelijk om te stemmen op de vragen en het commentaar, zowel positief als negatief</string>
+    <string name="helpcontent5">Als u veel vragen hetzelfde beantwoord als een ander individu, kunt u praten met hem of haar</string>
+    <string name="helpcontent6">Wij verzoeken u vriendelijk om de vragen en het commentaar te flaggen, indien deze ongepast zijn</string>
+    <string name="helpcontent7">In de app is een verborgen knop gestopt. Veel zoekplezier!</string>
+    <string name="sluit">\u0020\u0020\u0020sluit\u0020\u0020\u0020</string>
+    <string name="volgende">volgende-></string>
+    <string name="vorige"><tr><td>&lt;</td></tr>-vorige</string>
+
+</resources>
