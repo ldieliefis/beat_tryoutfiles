@@ -18,23 +18,23 @@ public class BeatPopup {
 
         switch (page){
             case 0:
-                popUp.setNeutralButton(R.string.help_sluit, MaakListener(context, page, 0));
-                popUp.setPositiveButton(R.string.help_volgende, MaakListener(context, page, 1));
+                popUp.setNeutralButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
+                popUp.setPositiveButton(R.string.help_volgende, MaakHelpListener(context, page, 1));
                 break;
             case (6):
-                popUp.setPositiveButton(R.string.help_sluit, MaakListener(context, page, 0));
-                popUp.setNeutralButton(R.string.help_vorige, MaakListener(context, page, -1));
+                popUp.setPositiveButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
+                popUp.setNeutralButton(R.string.help_vorige, MaakHelpListener(context, page, -1));
                 break;
             default:
-                popUp.setNeutralButton(R.string.help_vorige, MaakListener(context, page, -1));
-                popUp.setNegativeButton(R.string.help_sluit, MaakListener(context, page, 0));
-                popUp.setPositiveButton(R.string.help_volgende, MaakListener(context, page, 1));
+                popUp.setNeutralButton(R.string.help_vorige, MaakHelpListener(context, page, -1));
+                popUp.setNegativeButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
+                popUp.setPositiveButton(R.string.help_volgende, MaakHelpListener(context, page, 1));
                 break;
         }
         popUp.show();
     }
 
-    private static DialogInterface.OnClickListener MaakListener(final Context context, final int page, final int optie){
+    private static DialogInterface.OnClickListener MaakHelpListener(final Context context, final int page, final int optie){
         DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
