@@ -14,23 +14,19 @@ public class BeatPopup {
         popUp
                 .setIcon(R.drawable.logo_klein)
                 .setTitle(Help_Titles[page])
-                .setMessage(Help_Messages[page]);
+                .setMessage(Help_Messages[page])
+                .setNeutralButton(R.string.help_vorige, MaakHelpListener(context, page, -1))
+                .setNegativeButton(R.string.help_sluit, MaakHelpListener(context, page, 0))
+                .setPositiveButton(R.string.help_volgende, MaakHelpListener(context, page, 1));
 
-        switch (page){
-            case 0:
-                popUp.setNeutralButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
-                popUp.setPositiveButton(R.string.help_volgende, MaakHelpListener(context, page, 1));
-                break;
-            case (6):
-                popUp.setPositiveButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
-                popUp.setNeutralButton(R.string.help_vorige, MaakHelpListener(context, page, -1));
-                break;
-            default:
-                popUp.setNeutralButton(R.string.help_vorige, MaakHelpListener(context, page, -1));
-                popUp.setNegativeButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
-                popUp.setPositiveButton(R.string.help_volgende, MaakHelpListener(context, page, 1));
-                break;
+        if(page == 0){
+            popUp.setNeutralButton(R.string.help_sluit, MaakHelpListener(context, page, 0));
+            popUp.setNegativeButton(null, null);
         }
+        if(page == Help_Titles.length-1){
+            popUp.setPositiveButton(null, null);
+        }
+
         popUp.show();
     }
 
