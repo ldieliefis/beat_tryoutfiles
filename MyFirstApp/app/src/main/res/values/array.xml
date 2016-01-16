@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="help_titles">
+        <item>@string/help_title_1</item>
+        <item>@string/help_title_2</item>
+        <item>@string/help_title_3</item>
+        <item>@string/help_title_4</item>
+        <item>@string/help_title_5</item>
+        <item>@string/help_title_6</item>
+        <item>@string/help_title_7</item>
+    </string-array>
+    <string-array name="help_messages">
+        <item>@string/help_message_1</item>
+        <item>@string/help_message_2</item>
+        <item>@string/help_message_3</item>
+        <item>@string/help_message_4</item>
+        <item>@string/help_message_5</item>
+        <item>@string/help_message_6</item>
+        <item>@string/help_message_7</item>
+    </string-array>
+</resources>

@@ -23,6 +23,8 @@
         <item name="android:textColor">@color/Button_Text_Color</item>
     </style>
 
+    <style name="BeaTPopUp" parent="Theme.AppCompat.Dialog.Alert"></style>
+
     <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
 
 </resources>
