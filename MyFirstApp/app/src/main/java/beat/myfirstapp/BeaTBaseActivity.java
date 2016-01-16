@@ -64,7 +64,7 @@ public class BeaTBaseActivity extends AppCompatActivity implements NavigationVie
         } else if (id == R.id.menu_instructies) {
             BeatPopup.Help_Pages(this, 0);
         } else if (id == R.id.menu_credits) {
-
+            BeatPopup.Credits(this);
         } else if (id == R.id.menu_uitloggen) {
 
         }

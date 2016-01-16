@@ -6,12 +6,13 @@ import android.content.DialogInterface;
 
 public class BeatPopup {
     public static void Help_Pages(final Context context, final int page){
-        final AlertDialog.Builder popUp = new AlertDialog.Builder(context, R.style.BeaTPopUp);
+        final AlertDialog.Builder popUp = new AlertDialog.Builder(context, R.style.BeaTTheme_PopUp);
 
         String[] Help_Titles = context.getResources().getStringArray(R.array.help_titles);
         String[] Help_Messages = context.getResources().getStringArray(R.array.help_messages);
 
         popUp
+                .setIcon(R.drawable.logo_klein)
                 .setTitle(Help_Titles[page])
                 .setMessage(Help_Messages[page]);
 
@@ -44,5 +45,22 @@ public class BeatPopup {
             }
         };
         return listener;
+    }
+
+    public static void Credits(final Context context){
+
+        AlertDialog.Builder credits = new AlertDialog.Builder(context, R.style.BeaTTheme_PopUp);
+        credits
+                .setIcon(R.drawable.logo_klein)
+                .setTitle(R.string.credits_title)
+                .setMessage(R.string.credits_message)
+                .setPositiveButton(R.string.credits_button, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        credits.show();
     }
 }

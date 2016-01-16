@@ -32,7 +32,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    //Help Strings
+    //Help popup
     <string name="help_title_1">1. Vragen</string>
     <string name="help_title_2">2. Resultaat</string>
     <string name="help_title_3">3. Commentaar</string>
@@ -50,5 +50,10 @@
     <string name="help_sluit">\u0020\u0020\u0020sluit\u0020\u0020\u0020</string>
     <string name="help_volgende">Volgende</string>
     <string name="help_vorige">Vorige</string>
+
+    //Credits popup
+    <string name="credits_message">credits_message</string>
+    <string name="credits_title">credits_title</string>
+    <string name="credits_button">credits_button</string>
 
 </resources>
