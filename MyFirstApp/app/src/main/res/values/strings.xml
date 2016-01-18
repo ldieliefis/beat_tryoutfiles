@@ -52,8 +52,8 @@
     <string name="help_vorige">Vorige\u0020\u0020\u0020\u0020\u0020</string>
 
     //Credits popup
-    <string name="credits_message">Nicole van den Dries\nSander Feenstra\nBrian Janssen\nFloris Pauwels\nLaura Tigchelaar\nIris Tuhumena\n\nBen Ik Normaal App\nVersie 1.0.0\n@2015 Team Beat Inc.\nAll rights reserved</string>
-    <string name="credits_title">credits_title</string>
+    <string name="credits_message">BEN IK NORMAAL\n\nNicole van den Dries\nSander Feenstra\nBrian Janssen\nFloris Pauwels\nLaura Tigchelaar\nIris Tuhumena\n\nVersie 1.0.0\n@2015 Team Beat Inc.\nAll rights reserved</string>
+    <string name="credits_title">Credits</string>
     <string name="credits_button">Sluit</string>
 
     //Ben ik normaal teksten
