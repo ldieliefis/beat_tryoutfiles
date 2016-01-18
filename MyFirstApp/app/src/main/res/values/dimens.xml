@@ -10,14 +10,15 @@
     <dimen name="optionButton_text">14sp</dimen>
 
     //de vraag en resultaat activity
-    <dimen name="vraag_text_size">25sp</dimen>
+    <dimen name="vraag_text_size">40sp</dimen>
     <dimen name="framelayout_margin">5dp</dimen>
+    <dimen name="framelayout_margin_top">25dp</dimen>
 
     //alleen de vraag activity
-    <dimen name="button_antwoord_text_size">20sp</dimen>
+    <dimen name="button_antwoord_text_size">25sp</dimen>
 
     //alleen de resultaatactivity
-    <dimen name="Antwoord_Text_Size">30sp</dimen>
+    <dimen name="Antwoord_Text_Size">40sp</dimen>
     <dimen name="Percentage_Text_Size">40sp</dimen>
     <dimen name="Percentage_margin">5dp</dimen>
     <dimen name="Percentage_differer">1dp</dimen>

@@ -23,7 +23,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
+            android:paddingTop="@dimen/framelayout_margin_top"
             android:paddingLeft="@dimen/framelayout_margin"
             android:paddingRight="@dimen/framelayout_margin"
 
