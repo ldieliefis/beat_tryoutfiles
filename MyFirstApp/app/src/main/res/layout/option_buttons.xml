@@ -13,8 +13,7 @@
         android:id="@+id/Button_Up"
         android:onClick="ButtonVote"
 
-        android:text="@string/upvote_knop"
-        android:textSize="@dimen/optionButton_text"
+        android:drawableTop="@drawable/upvote"
 
         android:layout_width="@dimen/optionButton_small"
         android:layout_height="@dimen/optionButton_small"/>
@@ -23,8 +22,7 @@
         android:id="@+id/Button_Down"
         android:onClick="ButtonVote"
 
-        android:text="@string/downvote_knop"
-        android:textSize="@dimen/optionButton_text"
+        android:drawableTop="@drawable/downvote"
 
         android:layout_width="@dimen/optionButton_small"
         android:layout_height="@dimen/optionButton_small"/>
@@ -32,9 +30,7 @@
     <Button
         android:id="@+id/Button_Report"
         android:onClick="ButtonReport"
-
-        android:text="@string/report_knop"
-        android:textSize="@dimen/optionButton_text"
+        android:drawableTop="@drawable/vlag"
 
         android:layout_width="@dimen/optionButton_small"
         android:layout_height="@dimen/optionButton_small"/>
