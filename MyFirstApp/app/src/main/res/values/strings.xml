@@ -6,7 +6,7 @@
     <string name="downvote_knop">\\/</string>
     <string name="upvote_knop">/\\</string>
     <string name="resultaat_knop">resultaat</string>
-    <string name="volgende_knop">Volgende</string>
+    <string name="volgende_knop">--></string>
     <string name="title_activity_display_resultaat">Mijn Resultaat</string>
     <string name="title_activity_beniknormaal">Ben ik normaal?</string>
 
@@ -55,5 +55,11 @@
     <string name="credits_message">Nicole van den Dries\nSander Feenstra\nBrian Janssen\nFloris Pauwels\nLaura Tigchelaar\nIris Tuhumena\n\nBen Ik Normaal App\nVersie 1.0.0\n@2015 Team Beat Inc.\nAll rights reserved</string>
     <string name="credits_title">credits_title</string>
     <string name="credits_button">Sluit</string>
+
+    //Ben ik normaal teksten
+    <string name="percentage0_10">Wauw, jij bent wel heel erg normaal! Pas je op dat je geen grijze muis wordt!?</string>
+    <string name="percentage11_50">Jij kunt je goed identificeren met \'the crowd\', je mag je best wat meer onderscheiden!</string>
+    <string name="percentage51_90">Jij onderscheid je goed van de menigte, ga zo door!</string>
+    <string name="percentage91_100">Zo! Jij mag weleens wat meer naar je omgeving kijken. Deze score is echt niet normaal!</string>
 
 </resources>

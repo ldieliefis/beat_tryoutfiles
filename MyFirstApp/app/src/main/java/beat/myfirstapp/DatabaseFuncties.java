@@ -1,6 +1,9 @@
 package beat.myfirstapp;
 
+import android.os.HandlerThread;
+
 import java.util.Random;
+import java.util.concurrent.CountDownLatch;
 
 public class DatabaseFuncties {
 
@@ -10,9 +13,45 @@ public class DatabaseFuncties {
         return totaalList;
     }
 
+    // vraag het percentage 'dat de gebruiker normaal is' op, zet om van string naar int
+
+    /*public static void ZoekPercentage(final int gebruiker){
+        Thread krijgpercentage = new Thread(new Runnable(){
+            public void run (){
+                DatabaseFuncties.KrijgNormaalPercentage(gebruiker);
+            }
+        });
+
+        krijgpercentage.start();
+    }*/
+
+    // from http://stackoverflow.com/questions/9148899/returning-value-from-thread
+    public static int ZoekPercentage(final int gebruiker)throws InterruptedException
+    {
+        final CountDownLatch latch = new CountDownLatch(1);
+        final int[] percentage = new int[1];
+        Thread krijgpercentage = new HandlerThread("UIHandler"){
+            @Override
+            public void run(){
+                DatabaseFuncties.KrijgNormaalPercentage(gebruiker);
+                percentage[0] = DatabaseFuncties.KrijgNormaalPercentage(gebruiker);
+                latch.countDown(); // Release await() in the test thread.
+            }
+        };
+        krijgpercentage.start();
+        latch.await(); // Wait for countDown() in the UI thread. Or could uiThread.join();
+        return percentage[0];
+    }
+
+    private static int KrijgNormaalPercentage(int gebruiker){
+
+        String resultaatArray = NetwerkControl.LaadWebpagina("krijgnormaalpercentage.php?&user_id=" + gebruiker);
+        int percentage = Integer.parseInt(resultaatArray);
+        return percentage;
+    }
+
     public static void KrijgVraag(int gebruiker, int vId, VraagControl vControl){
 
-        // REMOVE "//" IN NEXT LINE TO GO OUT OF TESTING MODE
         String[] resultaatArray = KrijgWebStringArray("krijgvraag.php?question_id=" + vId + "&user_id=" + gebruiker, "~");
 
 
@@ -57,7 +96,7 @@ public class DatabaseFuncties {
 
 
     public static void VoteVraag(VraagControl vControl,int gebruiker, int vId, char answer, int poging){
-        String result = NetwerkControl.LaadWebpagina("votevraag.php?question_id=" + vId + "&user_id=" + gebruiker + "&answer=" + answer);
+        String result = NetwerkControl.LaadWebpagina("antwoordvraag.php?question_id=" + vId + "&user_id=" + gebruiker + "&answer=" + answer);
 
         if (result == "true"){
             vControl.VraagBeantwoord(true);
