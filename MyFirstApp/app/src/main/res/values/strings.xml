@@ -47,13 +47,13 @@
     <string name="help_message_5">Als u veel vragen hetzelfde beantwoord als een ander individu, kunt u praten met hem of haar</string>
     <string name="help_message_6">Wij verzoeken u vriendelijk om de vragen en het commentaar te flaggen, indien deze ongepast zijn</string>
     <string name="help_message_7">In de app is een verborgen knop gestopt. Veel zoekplezier!</string>
-    <string name="help_sluit">\u0020\u0020\u0020Sluit\u0020\u0020\u0020</string>
-    <string name="help_volgende">Volgende</string>
-    <string name="help_vorige">Vorige</string>
+    <string name="help_sluit">\u0020\u0020\u0020\u0020\u0020\u0020Sluit\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="help_volgende">\u0020\u0020\u0020\u0020Volgende</string>
+    <string name="help_vorige">Vorige\u0020\u0020\u0020\u0020\u0020</string>
 
     //Credits popup
-    <string name="credits_message">credits_message</string>
+    <string name="credits_message">Nicole van den Dries\nSander Feenstra\nBrian Janssen\nFloris Pauwels\nLaura Tigchelaar\nIris Tuhumena\n\nBen Ik Normaal App\nVersie 1.0.0\n@2015 Team Beat Inc.\nAll rights reserved</string>
     <string name="credits_title">credits_title</string>
-    <string name="credits_button">credits_button</string>
+    <string name="credits_button">Sluit</string>
 
 </resources>

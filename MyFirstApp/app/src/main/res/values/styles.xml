@@ -26,9 +26,6 @@
     <style name="BeaTTheme_PopUp" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowBackground">@color/PrimaryBlue</item>
         <item name="android:textColor">@color/PrimaryGrey</item>
-
-        <item name="colorPrimary">@color/Toolbar_Background</item>
-        <item name="colorPrimaryDark">@color/Statusbar_Background</item>
     </style>
 
     <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
