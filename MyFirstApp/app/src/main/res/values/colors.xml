@@ -12,6 +12,7 @@
 
     <color name="Statusbar_Background">#122F72</color>
     <color name="Toolbar_Background">#14327D</color>
+    <color name="Toolbar_Text">#CCCCCC</color>
 
     <color name="PercentageGekheidMeerderheid">#ffffff</color>
     <color name="PercentageGekheidMinderheid">#ff88ff</color>
