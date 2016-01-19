@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="drawerArrowStyle">@style/NavigationDrawerKnop</item>
+    </style>
     <!--
     <item name="windowActionBar">false</item>
     <item name="android:windowActionBar">false</item>
@@ -13,6 +16,8 @@
 
         <item name="colorPrimary">@color/Toolbar_Background</item>
         <item name="colorPrimaryDark">@color/Statusbar_Background</item>
+
+
     </style>
     <!--
         <item name="colorPrimary">#3F51B5</item>
@@ -29,5 +34,10 @@
     </style>
 
     <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
+
+    <style name="NavigationDrawerKnop" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/PrimaryGrey</item>
+    </style>
+
 
 </resources>
